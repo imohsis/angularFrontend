@@ -1,0 +1,57 @@
+<label>Name</label><br>
+<input type="text" [(ngModel)]="newBook.name" />
+<br><br>
+
+<label>Author</label><br>
+<input type="text" [(ngModel)]="newBook.author" />
+<br><br>
+
+<label>ISBN</label><br>
+<input type="text" [(ngModel)]="newBook.isbn" />
+<br><br>
+
+<label>Publisher</label><br>
+<input type="text" [(ngModel)]="newBook.publisher" />
+<br><br>
+
+<label>Year</label><br>
+<input type="number" minlength="4" maxlength="4" [(ngModel)]="newBook.year" />
+<br><br>
+
+<button (click)="addBook()">Add Book</button>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Author</th>
+		<th>ISBN</th>
+		<th>Publisher</th>
+		<th>Year</th>
+	</tr>
+
+	    <tr *ngFor="let book of books">
+          <i><td>{{ book.name }}</td></i>
+          <td>{{ book.Author }}</td>
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.publisher }}</td>
+          <td>{{ book.year }}</td>
+ </tr> 
+</table>
